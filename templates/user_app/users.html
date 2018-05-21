@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+
+    </head>
+    <body>
+    <h1>
+    WELCOME TO OUR USER VIEW APP
+    </h1>
+    <br>
+    <a href="{% url 'index' %}">
+        <em>
+            index
+        </em>
+    </a>
+    {% for a_user in user_set %}
+    <h5>{{ a_user.first_name }}</h5>
+    <h5>{{ a_user.last_name }}</h5>
+    <h5>{{ a_user.email }}</h5>
+        <br>
+    {% endfor %}
+
+    </body>
+</html>

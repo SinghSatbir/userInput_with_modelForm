@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+
+</head>
+<body>
+<h1>
+    WELCOME TO OUR USER APP
+    </h1>
+<br>
+<a href="{% url 'index' %}">
+    <em>
+        index
+    </em>
+</a><br>
+Sign Up Here !!
+<form method="post">
+    {{ form_full.as_p }}
+    {% csrf_token %}
+    <input name="Submits" type="submit">
+</form>
+</body>
+</html>
